@@ -38,12 +38,18 @@ namespace ProductReviewManagementProject
                 new ProductReview(){ProductID=25,UserID=1,Rating=3,Review="nice",isLike=true}
 
             };
+            Console.WriteLine("\n");
+            Console.WriteLine("UC1-Adding values and displaying all records: ");
             foreach (var list in productReviewList)
             {
                 Console.WriteLine("ProductID:- " + list.ProductID + " " + "UserID:- " + list.UserID
                     + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
                 Console.WriteLine("-----------------------------------------------------------------");
             }
+            Console.WriteLine("\n");
+            Console.WriteLine("UC2- Retrieving Top 3 records based on rating: ");
+            Management management = new Management();
+            management.TopRecords(productReviewList);
         }
     }
 }
