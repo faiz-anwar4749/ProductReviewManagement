@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 namespace ProductReviewManagementProject
 {
     class Program
@@ -36,7 +35,6 @@ namespace ProductReviewManagementProject
                 new ProductReview(){ProductID=22,UserID=1,Rating=10,Review="nice",isLike=true},
                 new ProductReview(){ProductID=22,UserID=1,Rating=8,Review="nice",isLike=true},
                 new ProductReview(){ProductID=25,UserID=1,Rating=3,Review="nice",isLike=true}
-
             };
             Console.WriteLine("\n");
             Console.WriteLine("UC1-Adding values and displaying all records: ");
@@ -53,6 +51,9 @@ namespace ProductReviewManagementProject
             Console.WriteLine("\n");
             Console.WriteLine("UC3- Retrieving records with specific conditions: ");
             management.SelectedRecords(productReviewList);
+            Console.WriteLine("\n");
+            Console.WriteLine("UC4- Count: ");
+            management.RetrieveCountOfRecords(productReviewList);
         }
     }
 }
