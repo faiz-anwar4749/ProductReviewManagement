@@ -14,7 +14,7 @@ namespace ProductReviewManagementProject
                 new ProductReview(){ProductID=3,UserID=1,Rating=5,Review="Good",isLike=true},
                 new ProductReview(){ProductID=4,UserID=1,Rating=6,Review="Good",isLike=false},
                 new ProductReview(){ProductID=5,UserID=1,Rating=2,Review="nice",isLike=true},
-                new ProductReview(){ProductID=6,UserID=1,Rating=1,Review="bas",isLike=true},
+                new ProductReview(){ProductID=6,UserID=1,Rating=1,Review="bad",isLike=true},
                 new ProductReview(){ProductID=8,UserID=1,Rating=1,Review="Good",isLike=false},
                 new ProductReview(){ProductID=8,UserID=1,Rating=9,Review="nice",isLike=true},
                 new ProductReview(){ProductID=2,UserID=1,Rating=10,Review="nice",isLike=true},
@@ -45,8 +45,8 @@ namespace ProductReviewManagementProject
                 Console.WriteLine("-----------------------------------------------------------------");
             }
             Console.WriteLine("\n");
-            Console.WriteLine("UC2- Retrieving Top 3 records based on rating: ");
             Management management = new Management();
+            Console.WriteLine("UC2- Retrieving Top 3 records based on rating: ");
             management.TopRecords(productReviewList);
             Console.WriteLine("\n");
             Console.WriteLine("UC3- Retrieving records with specific conditions: ");
@@ -54,6 +54,9 @@ namespace ProductReviewManagementProject
             Console.WriteLine("\n");
             Console.WriteLine("UC4- Count: ");
             management.RetrieveCountOfRecords(productReviewList);
+            Console.WriteLine("\n");
+            Console.WriteLine("UC5- Retrieving review by Product ID:");
+            management.RetrieveProductIDAndReview(productReviewList);
         }
     }
 }
