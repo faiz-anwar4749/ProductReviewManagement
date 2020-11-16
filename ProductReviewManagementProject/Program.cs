@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+
 namespace ProductReviewManagementProject
 {
     class Program
@@ -63,6 +65,13 @@ namespace ProductReviewManagementProject
             Console.WriteLine("\n");
             Console.WriteLine("UC7- Retrieving review by Product ID:");
             management.RetrieveProductIDAndReview(productReviewList);
+            Console.WriteLine("\n");
+            Console.WriteLine("UC8- Data Table created and rows added to it.");
+            DataTable dataTable = management.CreateDataTable();
+            foreach (var product in productReviewList)
+            {
+                dataTable.Rows.Add(product.ProductID, product.UserID, product.Rating, product.Review, product.isLike);
+            }
         }
     }
 }
