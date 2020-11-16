@@ -50,6 +50,9 @@ namespace ProductReviewManagementProject
             Console.WriteLine("UC2- Retrieving Top 3 records based on rating: ");
             Management management = new Management();
             management.TopRecords(productReviewList);
+            Console.WriteLine("\n");
+            Console.WriteLine("UC3- Retrieving records with specific conditions: ");
+            management.SelectedRecords(productReviewList);
         }
     }
 }

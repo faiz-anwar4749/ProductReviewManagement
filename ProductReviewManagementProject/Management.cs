@@ -20,5 +20,19 @@ namespace ProductReviewManagementProject
                 Console.WriteLine("-----------------------------------------------------------------");
             }
         }
+        public void SelectedRecords(List<ProductReview> listProductReview)
+        {
+            var recordedData = from productReviews in listProductReview
+                               where (productReviews.ProductID == 1 || productReviews.ProductID == 4 || productReviews.ProductID == 9)
+                               && productReviews.Rating > 3
+                               select productReviews;
+            Console.WriteLine("Rating greater than 3 with product id of 1,4,or 9: ");
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:- " + list.ProductID + " " + "UserID:- " + list.UserID
+                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
+                Console.WriteLine("-----------------------------------------------------------------");
+            }
+        }
     }
 }
