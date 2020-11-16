@@ -60,6 +60,9 @@ namespace ProductReviewManagementProject
             Console.WriteLine("\n");
             Console.WriteLine("UC6- Skipping top 5 records:");
             management.SkipTopFiveRecords(productReviewList);
+            Console.WriteLine("\n");
+            Console.WriteLine("UC7- Retrieving review by Product ID:");
+            management.RetrieveProductIDAndReview(productReviewList);
         }
     }
 }

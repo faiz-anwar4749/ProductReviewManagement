@@ -50,7 +50,7 @@ namespace ProductReviewManagementProject
             Console.WriteLine("ID with Review");
             foreach (var list in recordedData)
             {
-                Console.WriteLine("ID:"+ list.ProductID + "------>" + list.Review);
+                Console.WriteLine("ID:"+ list.ProductID + " ----->" + list.Review);
                 Console.WriteLine("----------------------");
             }
         }
